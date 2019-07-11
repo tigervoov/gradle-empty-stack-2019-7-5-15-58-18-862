@@ -7,6 +7,20 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //story1
+        Mobile myMobile=new Mobile("myPhone","white","apple");
+        System.out.println(myMobile.returnMessage("Message:","Hello,My name is Tiger"));
+        Iphone myIphone=new Iphone();
+        System.out.println(myIphone.returnMessage("<iPhone>Message","This is my iphone"));
+        Android_Phone myAndroidPhone=new Android_Phone();
+        System.out.println(myAndroidPhone.returnMessage("<Andriod>Message","This is my iphone"));
+
+        //story2
+        Mobile myMobile2=new Mobile("myPhone","white","apple");
+        myMobile2.getAllInfo();
+        //
+        Person person=new Person("Tiger");
+        person.sentMessage(new Iphone());
+        person.sentMessage(new Android_Phone());
     }
 }
